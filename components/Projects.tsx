@@ -131,7 +131,7 @@ export default function Projects() {
               </div>
 
               <h3 className='text-4xl font-bold gradient-text leading-tight'>
-                More Projects\nComing Soon
+                More Projects <br /> Coming Soon
               </h3>
 
               <p className='mt-6 text-gray-300 leading-relaxed text-lg'>
