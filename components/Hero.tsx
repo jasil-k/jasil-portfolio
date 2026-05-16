@@ -8,24 +8,24 @@ export default function Hero() {
 
     <section
       id='home'
-      className='relative min-h-screen overflow-hidden flex items-center px-6 pt-40 sm:pt-44 md:pt-48'
+      className='relative min-h-screen overflow-hidden flex items-center px-6 pt-6 md:pt-0'
     >
 
-      {/* Grid Background */}
+      {/* Animated Grid */}
       <div className='absolute inset-0 opacity-[0.05]'>
 
         <div className='absolute inset-0 bg-[linear-gradient(to_right,#ffffff22_1px,transparent_1px),linear-gradient(to_bottom,#ffffff22_1px,transparent_1px)] bg-[size:60px_60px]'></div>
 
       </div>
 
-      {/* Glow Backgrounds */}
-      <div className='absolute top-0 left-0 w-[350px] md:w-[500px] h-[350px] md:h-[500px] bg-blue-500/15 blur-2xl md:blur-3xl rounded-full animate-pulse'></div>
+      {/* Glow Orbs */}
+      <div className='absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
 
-      <div className='absolute bottom-0 right-0 w-[350px] md:w-[500px] h-[350px] md:h-[500px] bg-[#d6c8a4]/15 blur-2xl md:blur-3xl rounded-full animate-pulse'></div>
+      <div className='absolute bottom-0 right-0 w-96 h-96 bg-[#d6c8a4]/20 rounded-full blur-3xl animate-pulse'></div>
 
-      <div className='max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10'>
+      <div className='max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center relative z-10'>
 
-        {/* LEFT SIDE */}
+        {/* LEFT CONTENT */}
         <motion.div
           initial={{
             opacity: 0,
@@ -40,23 +40,23 @@ export default function Hero() {
           }}
         >
 
-          {/* Founder Badge */}
+          {/* Top Badge */}
           <motion.div
             whileHover={{
               scale: 1.05,
             }}
-            className='inline-flex items-center gap-3 px-5 py-3 sm:px-6 sm:py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl mb-8 sm:mb-10'
+            className='inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl mb-8'
           >
 
             <div className='w-3 h-3 rounded-full bg-green-400 animate-pulse'></div>
 
-            <p className='uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#d6c8a4] text-[10px] sm:text-xs'>
+            <p className='uppercase tracking-[0.3em] text-[#d6c8a4] text-xs md:text-sm'>
               NIT Calicut • Startup Focused
             </p>
 
           </motion.div>
 
-          {/* Heading */}
+          {/* Main Heading */}
           <motion.h1
             initial={{
               opacity: 0,
@@ -69,7 +69,7 @@ export default function Hero() {
             transition={{
               delay: 0.2,
             }}
-            className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95]'
+            className='text-5xl sm:text-6xl md:text-8xl font-black leading-[0.95]'
           >
 
             Muhammed
@@ -93,7 +93,7 @@ export default function Hero() {
             transition={{
               delay: 0.4,
             }}
-            className='mt-8 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl'
+            className='mt-8 text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl'
           >
 
             ECE undergraduate at NIT Calicut building
@@ -103,7 +103,7 @@ export default function Hero() {
           </motion.p>
 
           {/* Tags */}
-          <div className='flex flex-wrap gap-3 sm:gap-4 mt-10'>
+          <div className='flex flex-wrap gap-4 mt-10'>
 
             {[
               'AI Engineer',
@@ -118,7 +118,7 @@ export default function Hero() {
                   scale: 1.08,
                   y: -4,
                 }}
-                className='px-4 py-2 sm:px-5 sm:py-3 text-sm sm:text-base rounded-full bg-white/5 border border-white/10 backdrop-blur-xl hover:border-[#d6c8a4] transition duration-300 cursor-default'
+                className='px-5 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl hover:border-[#d6c8a4] transition duration-300'
               >
 
                 {item}
@@ -130,7 +130,7 @@ export default function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className='flex flex-wrap gap-4 sm:gap-5 mt-12'>
+          <div className='flex flex-wrap gap-5 mt-12'>
 
             <motion.a
               whileHover={{
@@ -142,11 +142,9 @@ export default function Hero() {
               }}
               href='/resume.pdf'
               target='_blank'
-              className='px-5 sm:px-6 md:px-8 py-3 md:py-4 rounded-full bg-[#d6c8a4] text-black font-bold text-sm sm:text-base md:text-lg hover:shadow-[0_0_40px_rgba(214,200,164,0.5)] transition duration-300'
+              className='px-8 py-4 rounded-full bg-[#d6c8a4] text-black font-bold text-lg hover:shadow-[0_0_40px_rgba(214,200,164,0.5)] transition duration-300'
             >
-
               View Resume
-
             </motion.a>
 
             <motion.a
@@ -158,11 +156,9 @@ export default function Hero() {
                 scale: 0.95,
               }}
               href='#projects'
-              className='px-5 sm:px-6 md:px-8 py-3 md:py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-[#d6c8a4] transition duration-300 text-sm sm:text-base'
+              className='px-8 py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-[#d6c8a4] transition duration-300'
             >
-
               View Projects
-
             </motion.a>
 
             <motion.a
@@ -174,16 +170,14 @@ export default function Hero() {
                 scale: 0.95,
               }}
               href='#contact'
-              className='px-5 sm:px-6 md:px-8 py-3 md:py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-[#d6c8a4] transition duration-300 text-sm sm:text-base'
+              className='px-8 py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-[#d6c8a4] transition duration-300'
             >
-
               Let’s Connect
-
             </motion.a>
 
           </div>
 
-          {/* Bottom Tagline */}
+          {/* Bottom Text */}
           <motion.div
             initial={{
               opacity: 0,
@@ -194,10 +188,10 @@ export default function Hero() {
             transition={{
               delay: 0.8,
             }}
-            className='mt-12 sm:mt-14'
+            className='mt-14'
           >
 
-            <p className='text-[#d6c8a4] text-sm sm:text-base md:text-lg tracking-[0.2em] uppercase'>
+            <p className='text-[#d6c8a4] text-lg tracking-[0.2em] uppercase'>
               Research → Build → Lead
             </p>
 
@@ -218,7 +212,7 @@ export default function Hero() {
           transition={{
             duration: 1,
           }}
-          className='relative flex justify-center mt-10 lg:mt-0'
+          className='relative flex justify-center mt-16 lg:mt-0'
         >
 
           {/* Rotating Ring */}
@@ -231,13 +225,13 @@ export default function Hero() {
               repeat: Infinity,
               ease: 'linear',
             }}
-            className='absolute w-[320px] sm:w-[400px] md:w-[520px] h-[320px] sm:h-[400px] md:h-[520px] rounded-full border border-[#d6c8a4]/20'
+            className='absolute w-[320px] md:w-[480px] h-[320px] md:h-[480px] rounded-full border border-[#d6c8a4]/20'
           ></motion.div>
 
           {/* Glow */}
-          <div className='absolute w-[280px] sm:w-[340px] md:w-[420px] h-[280px] sm:h-[340px] md:h-[420px] bg-[#d6c8a4]/20 blur-2xl md:blur-3xl rounded-full'></div>
+          <div className='absolute w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-[#d6c8a4]/20 blur-3xl rounded-full'></div>
 
-          {/* Floating Image */}
+          {/* Image */}
           <motion.div
             animate={{
               y: [0, -18, 0],
@@ -252,10 +246,8 @@ export default function Hero() {
             className='relative'
           >
 
-            {/* Glass Layer */}
             <div className='absolute inset-0 rounded-[3rem] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/10'></div>
 
-            {/* Image */}
             <motion.img
               src='/profile.png'
               alt='Muhammed Jasil K'
@@ -265,7 +257,7 @@ export default function Hero() {
               transition={{
                 duration: 0.5,
               }}
-              className='relative z-10 w-[280px] sm:w-[340px] md:w-[400px] lg:w-[430px] object-cover drop-shadow-[0_0_80px_rgba(214,200,164,0.35)]'
+              className='relative z-10 w-[300px] md:w-[420px] object-cover drop-shadow-[0_0_80px_rgba(214,200,164,0.35)]'
             />
 
           </motion.div>
