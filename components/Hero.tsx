@@ -257,7 +257,7 @@ export default function Hero() {
               transition={{
                 duration: 0.5,
               }}
-              className='relative z-10 w-[300px] md:w-[420px] object-cover drop-shadow-[0_0_80px_rgba(214,200,164,0.35)]'
+               className='relative z-10 w-[300px] md:w-[420px] rounded-3xl object-cover drop-shadow-[0_0_80px_rgba(214,200,164,0.35)]'
             />
 
           </motion.div>

@@ -21,16 +21,27 @@ export default function Contact() {
 
     try {
 
-      await fetch('/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(formData),
       })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong')
+      }
 
       alert('Message Sent Successfully!')
 
       e.target.reset()
 
     } catch (error) {
+
+      console.log(error)
 
       alert('Something went wrong.')
 
